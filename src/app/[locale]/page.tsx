@@ -5,8 +5,11 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Globe, Layers, BookOpen, Users } from "lucide-react";
 import { HeroSection } from "@/components/hero-section";
 import { FeatureCard } from "@/components/feature-card";
+import { useTranslations } from 'next-intl';
 
 export default function Home() {
+    const t = useTranslations('HomePage');
+
     return (
         <div className="flex flex-col min-h-screen">
             <HeroSection />
@@ -18,30 +21,30 @@ export default function Home() {
                         icon={Globe}
                         iconColor="text-primary"
                         iconBgColor="bg-primary/10 dark:bg-primary/20"
-                        title="Cartography"
-                        description="High-precision physical, political, and thematic maps. Trusted by government agencies and educational institutions."
+                        title={t('features.cartography.title')}
+                        description={t('features.cartography.description')}
                         linkHref="/products?category=cartography"
-                        linkText="View Maps"
+                        linkText={t('features.cartography.cta')}
                         linkColor="text-primary hover:text-secondary"
                     />
                     <FeatureCard
                         icon={Users}
                         iconColor="text-accent"
                         iconBgColor="bg-accent/10 dark:bg-accent/20"
-                        title="About Us"
-                        description="Learn about our history, mission, and the team behind Ukraine's leading cartography institute."
+                        title={t('features.education.title')} // Note: Using education title for About Us temporarily if needed, or add specific key
+                        description={t('features.education.description')} // Placeholder, should be About Us
                         linkHref="/about"
-                        linkText="Read Our Story"
+                        linkText={t('features.education.cta')} // Placeholder
                         linkColor="text-accent hover:text-accent/80"
                     />
                     <FeatureCard
                         icon={BookOpen}
                         iconColor="text-blue-500"
                         iconBgColor="bg-blue-500/10 dark:bg-blue-500/20"
-                        title="Education"
-                        description="Interactive atlases, digital learning materials, and curriculum support for modern geography."
+                        title={t('features.education.title')}
+                        description={t('features.education.description')}
                         linkHref="/products?category=education"
-                        linkText="Educational Resources"
+                        linkText={t('features.education.cta')}
                         linkColor="text-blue-500 hover:text-blue-400"
                     />
                 </div>

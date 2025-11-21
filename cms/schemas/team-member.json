@@ -1,0 +1,58 @@
+{
+    "kind": "collectionType",
+    "collectionName": "team-members",
+    "info": {
+        "singularName": "team-member",
+        "pluralName": "team-members",
+        "displayName": "Team Member",
+        "description": "Company team members"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {
+        "i18n": {
+            "localized": true
+        }
+    },
+    "attributes": {
+        "name": {
+            "type": "string",
+            "required": true,
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "position": {
+            "type": "string",
+            "required": true,
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "bio": {
+            "type": "text",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "photo": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "socialLinks": {
+            "type": "component",
+            "repeatable": true,
+            "component": "shared.social-link"
+        }
+    }
+}

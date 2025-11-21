@@ -1,0 +1,35 @@
+{
+    "HomePage": {
+        "title": "Institute of Advanced Technologies",
+        "subtitle": "Quiet Tech / Restrained Future",
+        "hero": {
+            "headline": "Mapping the Future of Ukraine",
+            "subheadline": "Precision cartography and educational technologies for a changing world.",
+            "cta": "Explore Products",
+            "secondary_cta": "About Us"
+        },
+        "features": {
+            "cartography": {
+                "title": "Cartography",
+                "description": "High-precision physical, political, and thematic maps. Trusted by government agencies and educational institutions.",
+                "cta": "View Maps"
+            },
+            "education": {
+                "title": "Education",
+                "description": "Interactive atlases, digital learning materials, and curriculum support for modern geography.",
+                "cta": "Educational Resources"
+            }
+        }
+    },
+    "Navigation": {
+        "products": "Products",
+        "about": "About Us",
+        "education": "Education",
+        "contact": "Contact Us"
+    },
+    "Footer": {
+        "rights": "All rights reserved.",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service"
+    }
+}

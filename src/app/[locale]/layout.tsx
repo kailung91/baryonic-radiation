@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { Inter, Unbounded } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 import { cn } from "@/lib/utils";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ThemeProvider } from "@/components/theme-provider";
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
 
 const inter = Inter({ subsets: ["latin", "cyrillic"], variable: "--font-inter" });
 const unbounded = Unbounded({ subsets: ["latin", "cyrillic"], variable: "--font-unbounded" });
@@ -14,13 +16,18 @@ export const metadata: Metadata = {
     description: "Cartography and Educational Technologies",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
     children,
+    params
 }: Readonly<{
     children: React.ReactNode;
+    params: Promise<{ locale: string }>;
 }>) {
+    const { locale } = await params;
+    const messages = await getMessages();
+
     return (
-        <html lang="uk" suppressHydrationWarning>
+        <html lang={locale} suppressHydrationWarning>
             <body
                 className={cn(
                     "min-h-screen bg-background font-sans antialiased flex flex-col",
@@ -28,19 +35,21 @@ export default function RootLayout({
                     unbounded.variable
                 )}
             >
-                <ThemeProvider
-                    attribute="class"
-                    defaultTheme="dark"
-                    enableSystem
-                    disableTransitionOnChange
-                >
-                    <div className="bg-noise" />
-                    <Header />
-                    <main className="flex-1 pt-16">
-                        {children}
-                    </main>
-                    <Footer />
-                </ThemeProvider>
+                <NextIntlClientProvider messages={messages}>
+                    <ThemeProvider
+                        attribute="class"
+                        defaultTheme="dark"
+                        enableSystem
+                        disableTransitionOnChange
+                    >
+                        <div className="bg-noise" />
+                        <Header />
+                        <main className="flex-1 pt-16">
+                            {children}
+                        </main>
+                        <Footer />
+                    </ThemeProvider>
+                </NextIntlClientProvider>
             </body>
         </html>
     );

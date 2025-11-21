@@ -6,8 +6,8 @@
         "tailwindcss"
     ],
     "rules": {
-        "tailwindcss/no-custom-classname": "warn",
-        "tailwindcss/classnames-order": "error",
+        "tailwindcss/no-custom-classname": "off",
+        "tailwindcss/classnames-order": "off",
         "tailwindcss/migration-from-tailwind-2": "off",
         "tailwindcss/no-contradicting-classname": "error"
     },

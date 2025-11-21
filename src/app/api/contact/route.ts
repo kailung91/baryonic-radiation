@@ -72,9 +72,9 @@ export async function POST(req: Request) {
                 default:
                     return NextResponse.json({ error: "Invalid form type" }, { status: 400 });
             }
-        } catch (error) {
+        } catch (error: unknown) {
             if (error instanceof z.ZodError) {
-                return NextResponse.json({ error: "Validation failed", details: error.errors }, { status: 400 });
+                return NextResponse.json({ error: "Validation failed", details: error.issues }, { status: 400 });
             }
             throw error;
         }
@@ -117,7 +117,7 @@ export async function POST(req: Request) {
 
         return NextResponse.json({ success: true });
 
-    } catch (error) {
+    } catch (error: unknown) {
         console.error("Contact API Error:", error);
         return NextResponse.json(
             { error: "Internal server error" },

@@ -1,9 +1,11 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { products } from "@/lib/data";
+import { cms } from "@/lib/cms";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Check, ExternalLink, Share2 } from "lucide-react";
 import { ContactForm } from "@/components/contact-form";
+
+export const revalidate = 60; // ISR: Revalidate every 60 seconds
 
 interface ProductPageProps {
     params: Promise<{
@@ -13,7 +15,7 @@ interface ProductPageProps {
 
 export default async function ProductPage({ params }: ProductPageProps) {
     const { slug } = await params;
-    const product = products.find((p) => p.slug === slug);
+    const product = await cms.getProductBySlug(slug);
 
     if (!product) {
         notFound();

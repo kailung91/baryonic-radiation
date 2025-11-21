@@ -138,9 +138,9 @@ export function MapView({
                 data: {
                     type: 'FeatureCollection',
                     features: [
-                        { type: 'Feature', geometry: { type: 'Point', coordinates: [30.5234, 50.4501] } },
-                        { type: 'Feature', geometry: { type: 'Point', coordinates: [30.5, 50.46] } },
-                        { type: 'Feature', geometry: { type: 'Point', coordinates: [30.55, 50.44] } }
+                        { type: 'Feature', geometry: { type: 'Point', coordinates: [30.5234, 50.4501] }, properties: {} },
+                        { type: 'Feature', geometry: { type: 'Point', coordinates: [30.5, 50.46] }, properties: {} },
+                        { type: 'Feature', geometry: { type: 'Point', coordinates: [30.55, 50.44] }, properties: {} }
                     ]
                 }
             });

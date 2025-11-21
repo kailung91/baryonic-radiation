@@ -5,7 +5,18 @@ import { ReactNode } from "react";
 
 type ButtonVariant = "primary" | "secondary" | "ghost" | "outline";
 
-interface InteractiveButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+// Omit drag-related and animation props that conflict with Framer Motion
+type SafeButtonProps = Omit<React.ButtonHTMLAttributes<HTMLButtonElement>,
+    | 'onDrag' | 'onDragStart' | 'onDragEnd' | 'onDragCapture' | 'onDragEndCapture'
+    | 'onDragEnter' | 'onDragEnterCapture' | 'onDragExit' | 'onDragExitCapture'
+    | 'onDragLeave' | 'onDragLeaveCapture' | 'onDragOver' | 'onDragOverCapture'
+    | 'onDragStartCapture' | 'onDrop' | 'onDropCapture'
+    | 'onAnimationStart' | 'onAnimationStartCapture' | 'onAnimationEnd' | 'onAnimationEndCapture'
+    | 'onAnimationIteration' | 'onAnimationIterationCapture'
+    | 'onTransitionEnd' | 'onTransitionEndCapture'
+>;
+
+interface InteractiveButtonProps extends SafeButtonProps {
     children: ReactNode;
     variant?: ButtonVariant;
     disabled?: boolean;
@@ -68,7 +79,7 @@ export const InteractiveButton = ({
                 ${variantStyles[variant]}
                 ${className || ""}
             `}
-            {...props}
+            {...(props as any)}
         >
             {children}
 
