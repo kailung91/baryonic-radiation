@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Mode Defaults - Clean & Minimal */
+    --background: #ffffff;
+    --foreground: #0a0a0a;
+
+    --card: #ffffff;
+    --card-foreground: #0a0a0a;
+
+    --popover: #ffffff;
+    --popover-foreground: #0a0a0a;
+
+    --primary: #0057B7;
+    --primary-foreground: #ffffff;
+
+    --secondary: #f5f5f5;
+    --secondary-foreground: #171717;
+
+    --muted: #f5f5f5;
+    --muted-foreground: #737373;
+
+    --accent: #f5f5f5;
+    --accent-foreground: #171717;
+
+    --destructive: #ef4444;
+    --destructive-foreground: #fafafa;
+
+    --border: #e5e5e5;
+    --input: #e5e5e5;
+    --ring: #0057B7;
+
+    --radius: 0.5rem;
+
+    /* Fonts */
+    --font-inter: 'Inter', sans-serif;
+    --font-kyiv: 'KyivType Sans', 'Unbounded', sans-serif;
+    --font-unbounded: 'Unbounded', sans-serif;
+  }
+
+  .dark {
+    /* Dark Mode (Quiet Tech) - Strict Adherence */
+    --background: #0A0A0A;
+    /* Neutral-950 */
+    --foreground: #EDEDED;
+
+    --card: #121212;
+    --card-foreground: #EDEDED;
+
+    --popover: #121212;
+    --popover-foreground: #EDEDED;
+
+    --primary: #0057B7;
+    /* Signal Blue */
+    --primary-foreground: #FFFFFF;
+
+    --secondary: #003D80;
+    --secondary-foreground: #FFFFFF;
+
+    --muted: #262626;
+    --muted-foreground: #A3A3A3;
+
+    --accent: #FFD700;
+    /* Kinetic Gold */
+    --accent-foreground: #000000;
+
+    --destructive: #7f1d1d;
+    --destructive-foreground: #fef2f2;
+
+    --border: #262626;
+    --input: #262626;
+    --ring: #0057B7;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  *:focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
+}
+
+/* Noise Texture */
+.bg-noise {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+@layer utilities {
+
+  /* Glassmorphism - Upgraded to backdrop-blur-xl */
+  .glass {
+    @apply bg-white/5 backdrop-blur-xl border border-white/5;
+  }
+
+  .glass-panel {
+    @apply bg-white/80 dark:bg-[#121212]/80 backdrop-blur-xl border border-black/5 dark:border-white/5;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Interactive Surface Pattern */
+  .interactive-surface {
+    @apply bg-white/5 border border-white/5 transition-all duration-300 hover:scale-105 hover:bg-white/10;
+  }
+
+  .interactive-surface:hover {
+    border-color: rgba(0, 87, 183, 0.3);
+  }
+}

@@ -1,0 +1,23 @@
+{
+    "extends": [
+        "next/core-web-vitals"
+    ],
+    "plugins": [
+        "tailwindcss"
+    ],
+    "rules": {
+        "tailwindcss/no-custom-classname": "warn",
+        "tailwindcss/classnames-order": "error",
+        "tailwindcss/migration-from-tailwind-2": "off",
+        "tailwindcss/no-contradicting-classname": "error"
+    },
+    "settings": {
+        "tailwindcss": {
+            "callees": [
+                "cn",
+                "cva"
+            ],
+            "config": "tailwind.config.ts"
+        }
+    }
+}
