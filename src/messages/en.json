@@ -1,35 +1,92 @@
 {
-    "HomePage": {
-        "title": "Institute of Advanced Technologies",
-        "subtitle": "Quiet Tech / Restrained Future",
-        "hero": {
-            "headline": "Mapping the Future of Ukraine",
-            "subheadline": "Precision cartography and educational technologies for a changing world.",
-            "cta": "Explore Products",
-            "secondary_cta": "About Us"
-        },
-        "features": {
-            "cartography": {
-                "title": "Cartography",
-                "description": "High-precision physical, political, and thematic maps. Trusted by government agencies and educational institutions.",
-                "cta": "View Maps"
-            },
-            "education": {
-                "title": "Education",
-                "description": "Interactive atlases, digital learning materials, and curriculum support for modern geography.",
-                "cta": "Educational Resources"
-            }
-        }
-    },
     "Navigation": {
         "products": "Products",
-        "about": "About Us",
         "education": "Education",
-        "contact": "Contact Us"
+        "about": "About Us",
+        "contact": "Contact",
+        "cta_contact": "Contact"
+    },
+    "Hero": {
+        "title": "Mapping the\nFuture of Ukraine",
+        "subtitle": "High-precision cartography, educational atlases, and next-generation digital learning platforms.",
+        "cta_primary": "View Catalog",
+        "cta_secondary": "About Institute"
+    },
+    "CoreDirections": {
+        "title": "Core Directions",
+        "cartography_title": "Cartography",
+        "cartography_desc": "Fundamental and educational maps, atlases, and globes of the highest quality.",
+        "education_title": "Educational Solutions",
+        "education_desc": "Ministry of Education approved. Innovative materials for modern schools.",
+        "digital_title": "Digital Platforms",
+        "digital_desc": "Interactive maps and mobile applications for contemporary education."
+    },
+    "Stats": {
+        "years": "Years Experience",
+        "schools": "Partner Schools",
+        "products": "Maps Printed"
+    },
+    "TrustedBy": {
+        "title": "Trusted By"
+    },
+    "CTA": {
+        "title": "Ready to cooperate?",
+        "subtitle": "Contact us to discuss your project",
+        "button": "Contact Us"
+    },
+    "ProductsPage": {
+        "title": "Product Catalog",
+        "subtitle": "Educational and presentation materials from the industry leader.",
+        "cta_buy": "Buy on ukrmaps.com",
+        "categories": {
+            "atlases": "Atlases and Outline Maps",
+            "globes": "Globes",
+            "maps": "Wall Maps",
+            "digital": "Digital Solutions"
+        },
+        "descriptions": {
+            "atlases": "Geography (grades 6-11), History of Ukraine (grades 5, 7-11), World History (grades 6-11). Course 'I Explore the World' (grades 3-6).",
+            "globes": "Diameter 26 cm and 32 cm. Models with lighting (mains or battery powered) and without.",
+            "maps": "Wide range of thematic maps. Production of large-format maps to individual order.",
+            "digital": "OsvitaNet educational platform and mobile applications on Google Play."
+        }
+    },
+    "DigitalSection": {
+        "title": "Digital Ecosystem",
+        "osvitanet_btn": "Go to new.osvitanet.com.ua",
+        "playstore_btn": "Download on Google Play"
+    },
+    "AboutPage": {
+        "hero_title": "Leader in Cartographic Innovation",
+        "hero_subtitle": "Over 25 years of experience in creating educational and scientific maps.",
+        "mission_title": "Our Mission",
+        "mission_desc": "To provide Ukrainian education and science with the most accurate, modern cartographic data that meets state standards and contemporary requirements.",
+        "history_title": "Success Story",
+        "history_desc": "The Institute of Advanced Technologies was founded in 1999. During this time, we have evolved from experimental production to a leading publishing house whose products are used in every school in Ukraine."
+    },
+    "ContactPage": {
+        "title": "Contact Us",
+        "subtitle": "We are open to cooperation with educational institutions and businesses.",
+        "form": {
+            "name": "Your Name",
+            "email": "Email",
+            "message": "Message",
+            "submit": "Send"
+        },
+        "info": {
+            "address_label": "Address",
+            "address_value": "Kyiv, Ukraine",
+            "email_label": "Email",
+            "email_value": "info@iat.kyiv.ua",
+            "hours_label": "Business Hours",
+            "hours_value": "Mon-Fri: 9:00 AM - 6:00 PM"
+        }
     },
     "Footer": {
-        "rights": "All rights reserved.",
+        "address": "Kyiv, Ukraine",
+        "legal_title": "Legal",
         "privacy": "Privacy Policy",
-        "terms": "Terms of Service"
+        "terms": "Terms of Use",
+        "rights": "© 2025 Institute of Advanced Technologies PJSC. All rights reserved."
     }
 }

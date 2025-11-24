@@ -1,78 +1,62 @@
 "use client";
 
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Globe, Layers, BookOpen, Users } from "lucide-react";
-import { HeroSection } from "@/components/hero-section";
-import { FeatureCard } from "@/components/feature-card";
 import { useTranslations } from 'next-intl';
+import { HeroSection } from "@/components/layout/hero-section";
+import { PartnersSection } from "@/components/home/partners-section";
+import { FeatureGrid } from "@/components/home/feature-grid";
+import { StatsSection } from "@/components/home/stats-section";
+import { Container } from "@/components/ui/container";
+import { Button } from "@/components/ui/button";
+import { Link } from "@/navigation";
 
 export default function Home() {
-    const t = useTranslations('HomePage');
+    const tCore = useTranslations('CoreDirections');
+    const tCTA = useTranslations('CTA');
 
     return (
-        <div className="flex flex-col min-h-screen">
+        <main>
+            {/* Hero Section - Atmospheric, Tall, Enhanced CTAs */}
             <HeroSection />
 
-            {/* Features Grid */}
-            <section className="container py-24 border-t border-gray-200 dark:border-white/5">
-                <div className="grid md:grid-cols-3 gap-8">
-                    <FeatureCard
-                        icon={Globe}
-                        iconColor="text-primary"
-                        iconBgColor="bg-primary/10 dark:bg-primary/20"
-                        title={t('features.cartography.title')}
-                        description={t('features.cartography.description')}
-                        linkHref="/products?category=cartography"
-                        linkText={t('features.cartography.cta')}
-                        linkColor="text-primary hover:text-secondary"
-                    />
-                    <FeatureCard
-                        icon={Users}
-                        iconColor="text-accent"
-                        iconBgColor="bg-accent/10 dark:bg-accent/20"
-                        title={t('features.education.title')} // Note: Using education title for About Us temporarily if needed, or add specific key
-                        description={t('features.education.description')} // Placeholder, should be About Us
-                        linkHref="/about"
-                        linkText={t('features.education.cta')} // Placeholder
-                        linkColor="text-accent hover:text-accent/80"
-                    />
-                    <FeatureCard
-                        icon={BookOpen}
-                        iconColor="text-blue-500"
-                        iconBgColor="bg-blue-500/10 dark:bg-blue-500/20"
-                        title={t('features.education.title')}
-                        description={t('features.education.description')}
-                        linkHref="/products?category=education"
-                        linkText={t('features.education.cta')}
-                        linkColor="text-blue-500 hover:text-blue-400"
-                    />
-                </div>
+            {/* Partners Section - Social Proof */}
+            <PartnersSection />
+
+            {/* Core Directions - Feature Grid */}
+            <section className="py-24 relative z-10">
+                <Container>
+                    <h2 className="text-3xl font-heading font-bold mb-16 text-center text-foreground">
+                        {tCore('title')}
+                    </h2>
+                    <FeatureGrid />
+                </Container>
             </section>
 
-            {/* Stats / Trust Section */}
-            <section className="border-y border-white/5 bg-surface/50">
-                <div className="container py-16">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                        <div>
-                            <div className="text-4xl font-heading font-bold text-foreground mb-2">25+</div>
-                            <div className="text-sm text-muted-foreground">Years of Experience</div>
-                        </div>
-                        <div>
-                            <div className="text-4xl font-heading font-bold text-foreground mb-2">10k+</div>
-                            <div className="text-sm text-muted-foreground">Maps Published</div>
-                        </div>
-                        <div>
-                            <div className="text-4xl font-heading font-bold text-foreground mb-2">500+</div>
-                            <div className="text-sm text-muted-foreground">Enterprise Clients</div>
-                        </div>
-                        <div>
-                            <div className="text-4xl font-heading font-bold text-foreground mb-2">100%</div>
-                            <div className="text-sm text-muted-foreground">Ukrainian Made</div>
+            {/* Stats Section - Animated Counters */}
+            <StatsSection />
+
+            {/* CTA Section - Final call to action before footer */}
+            <section className="py-24 relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
+                <div className="absolute inset-0 bg-noise opacity-[0.015]" />
+
+                <Container className="relative z-10">
+                    <div className="max-w-3xl mx-auto text-center space-y-6">
+                        <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
+                            {tCTA('title')}
+                        </h2>
+                        <p className="text-xl text-muted-foreground">
+                            {tCTA('subtitle')}
+                        </p>
+                        <div className="pt-4">
+                            <Button size="lg" variant="default" asChild>
+                                <Link href="/contact">
+                                    {tCTA('button')}
+                                </Link>
+                            </Button>
                         </div>
                     </div>
-                </div>
+                </Container>
             </section>
-        </div>
+        </main>
     );
 }

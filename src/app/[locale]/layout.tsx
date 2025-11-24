@@ -12,8 +12,35 @@ const inter = Inter({ subsets: ["latin", "cyrillic"], variable: "--font-inter" }
 const unbounded = Unbounded({ subsets: ["latin", "cyrillic"], variable: "--font-unbounded" });
 
 export const metadata: Metadata = {
-    title: "Institute of Advanced Technologies",
-    description: "Cartography and Educational Technologies",
+    title: {
+        template: '%s | IAT',
+        default: 'Institute of Advanced Technologies'
+    },
+    description: 'High-precision cartography, educational atlases, and digital learning platforms. Leading cartographic publisher in Ukraine.',
+    keywords: [
+        'Cartography',
+        'Ukraine',
+        'Education',
+        'Atlases',
+        'Maps',
+        'OsvitaNet',
+        'IAT',
+        'Institute of Advanced Technologies',
+        'НУШ',
+        'Глобуси',
+        'Контурні карти'
+    ],
+    authors: [
+        { name: 'Institute of Advanced Technologies', url: 'https://iat.kyiv.ua' }
+    ],
+    openGraph: {
+        type: 'website',
+        locale: 'uk_UA',
+        alternateLocale: 'en_US',
+        title: 'Institute of Advanced Technologies',
+        description: 'High-precision cartography, educational atlases, and digital learning platforms.',
+        siteName: 'IAT Digital Platform'
+    }
 };
 
 export default async function RootLayout({
@@ -44,7 +71,7 @@ export default async function RootLayout({
                     >
                         <div className="bg-noise" />
                         <Header />
-                        <main className="flex-1 pt-16">
+                        <main className="flex-1">
                             {children}
                         </main>
                         <Footer />
