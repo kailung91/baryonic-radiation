@@ -132,7 +132,7 @@ export default function ContactPage() {
                                         Дякуємо!
                                     </h3>
                                     <p className="text-muted-foreground">
-                                        Ваше повідомлення успішно надіслано. Ми зв'яжемося з вами найближчим часом.
+                                        Ваше повідомлення успішно надіслано. Ми зв&apos;яжемося з вами найближчим часом.
                                     </p>
                                     <Button
                                         variant="outline"

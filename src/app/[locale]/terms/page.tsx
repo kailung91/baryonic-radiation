@@ -14,7 +14,7 @@ export default function TermsPage() {
                     Last updated: November 20, 2025
                 </p>
                 <p>
-                    Please read these Terms of Service ("Terms", "Terms of Service") carefully before using
+                    Please read these Terms of Service (&quot;Terms&quot;, &quot;Terms of Service&quot;) carefully before using
                     the IAT Digital Platform operated by the Institute of Advanced Technologies.
                 </p>
 
@@ -33,7 +33,7 @@ export default function TermsPage() {
 
                 <h2 className="text-2xl font-heading font-semibold mt-8 mb-4">3. Disclaimer</h2>
                 <p>
-                    The materials on IAT's website are provided on an 'as is' basis. IAT makes no warranties,
+                    The materials on IAT&apos;s website are provided on an &apos;as is&apos; basis. IAT makes no warranties,
                     expressed or implied, and hereby disclaims and negates all other warranties including,
                     without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose,
                     or non-infringement of intellectual property or other violation of rights.

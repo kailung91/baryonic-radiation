@@ -14,7 +14,7 @@ export default function PrivacyPage() {
                     Last updated: November 20, 2025
                 </p>
                 <p>
-                    The Institute of Advanced Technologies ("we", "our", or "us") is committed to protecting your privacy.
+                    The Institute of Advanced Technologies (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) is committed to protecting your privacy.
                     This Privacy Policy explains how your personal information is collected, used, and disclosed by IAT.
                 </p>
 

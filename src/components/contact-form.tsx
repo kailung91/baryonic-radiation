@@ -76,7 +76,7 @@ export function ContactForm({ type = "general", defaultProduct, className }: Con
                 </div>
                 <h3 className="font-heading text-2xl font-bold mb-2">Message Sent!</h3>
                 <p className="text-muted-foreground mb-6">
-                    Thank you for reaching out. We'll get back to you shortly.
+                    Thank you for reaching out. We&apos;ll get back to you shortly.
                 </p>
                 <Button onClick={() => setStatus("idle")} variant="outline">
                     Send Another Message

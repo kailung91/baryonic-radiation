@@ -1,6 +1,4 @@
-"use client";
-
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { HeroSection } from "@/components/layout/hero-section";
 import { PartnersSection } from "@/components/home/partners-section";
 import { FeatureGrid } from "@/components/home/feature-grid";
@@ -9,9 +7,9 @@ import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/navigation";
 
-export default function Home() {
-    const tCore = useTranslations('CoreDirections');
-    const tCTA = useTranslations('CTA');
+export default async function Home() {
+    const tCore = await getTranslations('CoreDirections');
+    const tCTA = await getTranslations('CTA');
 
     return (
         <main>

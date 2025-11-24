@@ -23,7 +23,7 @@ export default function DesignSystemPage() {
                         Design System Verification
                     </h1>
                     <p className="text-muted-foreground">
-                        "Quiet Tech" UI primitives showcase and testing environment.
+                        &quot;Quiet Tech&quot; UI primitives showcase and testing environment.
                     </p>
                 </div>
 
@@ -53,7 +53,7 @@ export default function DesignSystemPage() {
                         </div>
                         <div>
                             <p className="font-sans text-base text-foreground leading-relaxed">
-                                Body text using Inter font. This demonstrates readability and contrast in the "Quiet Tech" design system.
+                                Body text using Inter font. This demonstrates readability and contrast in the &quot;Quiet Tech&quot; design system.
                                 The Ukrainian Blue (#0057B7) and Kinetic Gold (#FFD700) accents complement the deep neutral background.
                             </p>
                             <p className="text-sm text-muted-foreground mt-1">font-sans, text-base</p>

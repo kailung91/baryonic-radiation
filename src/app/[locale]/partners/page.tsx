@@ -20,7 +20,7 @@ export default function PartnersPage() {
                         </h1>
                         <p className="text-xl text-muted-foreground leading-relaxed">
                             Join our network of educational institutions, government agencies, and technology providers.
-                            Let's build the future of cartography together.
+                            Let&apos;s build the future of cartography together.
                         </p>
                     </motion.div>
 
@@ -45,7 +45,7 @@ export default function PartnersPage() {
                                 </div>
                                 <div>
                                     <h3 className="font-heading text-lg font-semibold mb-2">Enterprise Solutions</h3>
-                                    <p className="text-muted-foreground">Customized mapping solutions tailored to your organization's specific needs.</p>
+                                    <p className="text-muted-foreground">Customized mapping solutions tailored to your organization&apos;s specific needs.</p>
                                 </div>
                             </div>
 

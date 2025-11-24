@@ -6,10 +6,11 @@ const withNextIntl = createNextIntlPlugin('./src/i18n.ts');
 const nextConfig: NextConfig = {
     /* config options here */
     eslint: {
-        ignoreDuringBuilds: true,
+        ignoreDuringBuilds: false,
+        dirs: ['src']
     },
     typescript: {
-        ignoreBuildErrors: true,
+        ignoreBuildErrors: false,
     },
     productionBrowserSourceMaps: false,
     images: {
