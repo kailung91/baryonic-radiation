@@ -13,32 +13,37 @@ const unbounded = Unbounded({ subsets: ["latin", "cyrillic"], variable: "--font-
 
 export const metadata: Metadata = {
     title: {
-        template: '%s | IAT',
-        default: 'Institute of Advanced Technologies'
+        template: '%s | Інститут передових технологій',
+        default: 'Інститут передових технологій'
     },
-    description: 'High-precision cartography, educational atlases, and digital learning platforms. Leading cartographic publisher in Ukraine.',
+    description: 'Офіційна цифрова платформа Інституту передових технологій. Провідне видавництво України, що спеціалізується на високоточній картографії, навчальних атласах та сучасних цифрових освітніх рішеннях.',
     keywords: [
+        'Інститут передових технологій',
+        'Institute of Advanced Technologies',
+        'IAT',
+        'Картографія',
         'Cartography',
-        'Ukraine',
-        'Education',
+        'Атласи',
         'Atlases',
+        'НУШ',
+        'Освіта',
+        'Education',
+        'Ukraine',
+        'Україна',
         'Maps',
         'OsvitaNet',
-        'IAT',
-        'Institute of Advanced Technologies',
-        'НУШ',
         'Глобуси',
         'Контурні карти'
     ],
     authors: [
-        { name: 'Institute of Advanced Technologies', url: 'https://iat.kyiv.ua' }
+        { name: 'Інститут передових технологій', url: 'https://iat.kyiv.ua' }
     ],
     openGraph: {
         type: 'website',
         locale: 'uk_UA',
         alternateLocale: 'en_US',
-        title: 'Institute of Advanced Technologies',
-        description: 'High-precision cartography, educational atlases, and digital learning platforms.',
+        title: 'Інститут передових технологій',
+        description: 'Офіційна цифрова платформа Інституту передових технологій. Провідне видавництво України, що спеціалізується на високоточній картографії, навчальних атласах та сучасних цифрових освітніх рішеннях.',
         siteName: 'IAT Digital Platform'
     }
 };
@@ -69,7 +74,7 @@ export default async function RootLayout({
                         enableSystem
                         disableTransitionOnChange
                     >
-                        <div className="bg-noise" />
+                        <div className="absolute inset-0 z-0 bg-premium-depth" />
                         <Header />
                         <main className="flex-1">
                             {children}

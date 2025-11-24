@@ -4,6 +4,10 @@ import { useTranslations } from 'next-intl';
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Link } from "@/navigation";
+import { ParallaxText } from "@/components/animation/parallax-text";
+import { RotatingText } from "@/components/animation/rotating-text";
+
+import { motion } from "framer-motion";
 
 export function HeroSection() {
     const t = useTranslations('Hero');
@@ -18,24 +22,36 @@ export function HeroSection() {
                 style={{ animationDuration: '4s' }}
             />
 
-            {/* Noise overlay */}
-            <div className="absolute inset-0 bg-noise opacity-[0.02]" />
-
             {/* Content - Vertically Centered */}
             <Container className="relative z-10">
                 <div className="max-w-5xl mx-auto text-center space-y-8">
-                    {/* Large Heading - Adaptive text color */}
-                    <h1 className="font-heading text-5xl lg:text-7xl font-bold text-foreground tracking-tight leading-tight whitespace-pre-line">
-                        {t('title')}
-                    </h1>
+                    {/* Large Heading - Adaptive text color with Parallax Effect */}
+                    <ParallaxText speed={-30}>
+                        <h1 className="font-heading text-5xl lg:text-7xl font-bold text-foreground tracking-tight leading-tight whitespace-pre-line">
+                            {t('static_headline')}{' '}
+                            <span className="inline-block overflow-hidden h-[1.2em] align-top">
+                                <RotatingText />
+                            </span>
+                        </h1>
+                    </ParallaxText>
 
-                    {/* Subtitle - Muted foreground */}
-                    <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-sans leading-relaxed">
+                    {/* Subtitle - Muted foreground with Fade In */}
+                    <motion.p
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.2, duration: 0.8 }}
+                        className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-sans leading-relaxed"
+                    >
                         {t('subtitle')}
-                    </p>
+                    </motion.p>
 
-                    {/* Action Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+                    {/* Action Buttons with Fade In */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.4, duration: 0.8 }}
+                        className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8"
+                    >
                         <Button size="lg" variant="default" asChild>
                             <Link href="/products">
                                 {t('cta_primary')}
@@ -47,7 +63,7 @@ export function HeroSection() {
                                 {t('cta_secondary')}
                             </Link>
                         </Button>
-                    </div>
+                    </motion.div>
                 </div>
             </Container>
 

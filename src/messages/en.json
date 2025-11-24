@@ -7,7 +7,12 @@
         "cta_contact": "Contact"
     },
     "Hero": {
-        "title": "Mapping the\nFuture of Ukraine",
+        "static_headline": "Mapping the Future of",
+        "animated_targets": [
+            "Education",
+            "Business",
+            "The Nation"
+        ],
         "subtitle": "High-precision cartography, educational atlases, and next-generation digital learning platforms.",
         "cta_primary": "View Catalog",
         "cta_secondary": "About Institute"
